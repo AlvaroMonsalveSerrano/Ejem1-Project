@@ -50,6 +50,21 @@ python -m ejem1.main
 └── pyproject.toml
 ```
 
+## Instalar el cliente de GitHub 
+
+Pasos para instalar el cliente de GitHub
+
+```
+# Instalar gh CLI
+sudo apt install gh
+
+# Autenticarse
+gh auth login
+
+# Crear el repositorio
+gh repo create Ejem1-Project --public --description "Proyecto de ejemplo"
+```
+
 ## Conectar Claude Code con GitHub vía MCP
 
 ### Paso 1. Crear un Personal Access Token en GitHub

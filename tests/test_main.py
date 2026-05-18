@@ -1,3 +1,4 @@
+# Tests del punto de entrada principal; verifica la salida por stdout.
 from ejem1.main import main
 
 

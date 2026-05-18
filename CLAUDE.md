@@ -10,6 +10,11 @@ source .venv/bin/activate
 pip install -e .
 ```
 
+## Estándares
+- Python 3.11+
+- Comentarios en español
+- Funciones con docstrings siempre
+
 ## Comandos
 
 ```bash
@@ -19,7 +24,7 @@ export PYTHONPATH=/home/alvaro/workspace-claude/ejem1-project/src
 pytest
 
 # Ejecutar un test concreto
-pytest tests/test_main.py::test_main
+pytest tests/test_main.py::test_main++
 
 # Ejecutar el comando CLI
 ejem1
