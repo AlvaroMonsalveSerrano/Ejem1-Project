@@ -11,7 +11,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 class Base(DeclarativeBase):
-    pass
+    """Base declarativa compartida por todos los modelos ORM del proyecto."""
 
 
 def get_db():

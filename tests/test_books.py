@@ -11,6 +11,7 @@ VALID_AUTHOR = {
 
 
 def _create_author(client, data: dict | None = None) -> dict:
+    """Crea un autor vía POST y devuelve el cuerpo de respuesta; falla si no es 201."""
     payload = data if data is not None else VALID_AUTHOR
     resp = client.post("/v1/authors", json=payload)
     assert resp.status_code == 201
@@ -18,6 +19,7 @@ def _create_author(client, data: dict | None = None) -> dict:
 
 
 def _create_book(client, author_id: int, overrides: dict | None = None) -> dict:
+    """Crea un libro vía POST con un autor; permite sobreescribir campos del payload."""
     payload = {
         "title": "Don Quijote de la Mancha",
         "publisher": "Francisco de Robles",

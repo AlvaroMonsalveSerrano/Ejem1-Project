@@ -11,6 +11,7 @@ VALID_AUTHOR = {
 
 
 def _create_author(client, data: dict | None = None) -> dict:
+    """Crea un autor vía POST y devuelve el cuerpo de respuesta; falla si no es 201."""
     payload = data if data is not None else VALID_AUTHOR
     resp = client.post("/v1/authors", json=payload)
     assert resp.status_code == 201
