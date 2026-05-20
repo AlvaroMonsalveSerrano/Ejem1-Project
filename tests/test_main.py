@@ -5,6 +5,7 @@ from ejem1.main import app, main
 
 
 def test_app_is_fastapi_instance():
+    """La instancia `app` exportada debe ser una aplicación FastAPI."""
     from fastapi import FastAPI
 
     assert isinstance(app, FastAPI)

@@ -6,6 +6,8 @@ from ejem1.database import Base
 
 
 class Author(Base):
+    """Autor de uno o más libros; relacionado con Book mediante AuthorBook."""
+
     __tablename__ = "authors"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -20,6 +22,8 @@ class Author(Base):
 
 
 class Book(Base):
+    """Libro de la biblioteca; puede tener múltiples autores vía AuthorBook."""
+
     __tablename__ = "books"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
@@ -33,6 +37,8 @@ class Book(Base):
 
 
 class AuthorBook(Base):
+    """Tabla de asociación M:N entre Author y Book; incluye la fecha de contribución."""
+
     __tablename__ = "author_books"
 
     author_id = Column(Integer, ForeignKey("authors.id"), primary_key=True)
